@@ -20,3 +20,14 @@ Static site, no build step. Push the contents of this folder to the root of a Gi
 4. If the site is not served at https://alzamintech.com/, update the domain in `sitemap.xml`, `robots.txt` and the canonical / og tags.
 
 GitHub Pages: Settings → Pages → Deploy from branch → `main` / root. Add a `CNAME` file containing `alzamintech.com` if using the custom domain.
+
+## SEO checklist (already wired)
+- `index.html` and every page carry title, description, canonical, Open Graph + Twitter tags, favicon links and business structured data in the static `<head>`, so WhatsApp, Facebook, LinkedIn and Google read them without running JavaScript.
+- `og-image.jpg` (1200×630) is the share image for every page.
+- `sitemap.xml` lists 54 URLs; `robots.txt` points to it.
+- `404.html` is the not-found page; `.nojekyll` makes GitHub Pages serve files as-is.
+
+## Test after publishing
+- Share preview: https://developers.facebook.com/tools/debug/ and https://www.opengraph.xyz (paste https://alzamintech.com). WhatsApp caches previews; use "Scrape again" in the Facebook tool to refresh.
+- Structured data: https://search.google.com/test/rich-results
+- Sitemap: open https://alzamintech.com/sitemap.xml, then submit it in Google Search Console.
